@@ -1825,6 +1825,7 @@ li.slick-active button {
   }
   header .header-navbar-item-name {
     color: #f1f1f1;
+    font-weight: 500;
   }
   header .header-wrapper {
     display: -webkit-box;
