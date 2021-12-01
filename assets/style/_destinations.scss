@@ -1,0 +1,337 @@
+@import './variables';
+
+.destinations {
+    width: 100%;
+    margin-top: 9.0rem;
+    h3, h1 {
+        text-align: center;
+    }
+    h1 {
+        margin: 2.0rem 0 2.8rem;
+        span{
+            &::after {
+                background-color: $green-color;
+            }
+        }
+    }
+
+    &-list {
+        width: 120.0rem;
+        margin: 5.5rem auto;
+        display: flex;
+        gap: 3.0rem;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    &-item {
+        width: 37.0rem;
+        height: 37.0rem;
+        position: relative;
+        &-img {
+            &-bg {
+                width: 37.0rem;
+                height: 37.0rem;
+                position: absolute;
+                top: 0;
+                left: 0;
+                object-fit: cover;
+                object-position: center;
+            }
+            .logo {
+                position: absolute;
+                top: 3.0rem;
+                left: 3.0rem;
+                z-index: 2;
+            }
+            &-text {
+                color: #fff;
+                z-index: 2;
+                position: absolute;
+                bottom: 3.0rem;
+                left: 3.0rem;
+                h3 {
+                    text-align: left;
+                    font-size: 2.0rem;
+                    font-weight: 700;
+                    line-height: 2.0rem;
+                    margin-bottom: .8rem;
+                }
+                h6 {
+                    margin: 0;
+                    font-size: 1.4rem;
+                    line-height: 1.4rem;
+                    font-weight: 400;
+                    letter-spacing: .1rem;
+                    text-transform: uppercase;
+                }
+            }
+        }
+        &-des {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: $blue-color;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 4;
+            opacity: 0;
+            transition: all 0.5s ease-out;
+            h1 {
+                color: #fff;    
+                font-size:2.0rem;
+                font-weight:700;
+                line-height:2.0rem;
+                text-align:center;
+                margin-bottom: 2.0rem;
+            }
+            a {
+                text-decoration: none;
+                font-size:1.4rem;
+                letter-spacing:.1rem;
+                line-height:2.7rem;
+                text-align:center;
+                color: #fff;
+                font-weight: 200;
+                cursor: pointer;
+            }
+            .button-small {
+                margin-top: 2.0rem;
+                background-color: #fff;
+                color: $blue-color;
+                cursor: pointer;
+                line-height: 1.8rem;
+                font-weight: 300;
+            }
+        }
+        &:hover {
+            .destinations-item-des {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.holidays {
+    width: 100%;
+    margin-top: 9.0rem;
+    &-header {
+        width: 100%;
+        height: 23.5rem;
+        background-image: url('../img/destinations-header.jpg');
+        // background-image: url(http://www.nicdarkthemes.com/themes/travel/wp/demo/love-travel/wp-content/uploads/sites/3/2018/11/parallax-search-2.jpg?id=1538);
+        background-position: 50% 50%;
+        background-size: cover;
+        display: flex;
+        margin: auto;
+        justify-content: center;
+        align-items: center;
+        &-title {
+            h1{
+                color: #fff;
+                text-transform: capitalize;
+                font-size: 5.0rem;
+                line-height: 5.0rem;
+                span{
+                    z-index: 2;
+                    &::after {
+                        background-color: $lightred-color;
+                        z-index: -1;
+                    }
+                }
+            }
+        }
+        a.button-big {
+            background-color: #fff;
+            color: $lightred-color;
+            height: fit-content;
+            margin-left: 14.0rem;
+        }
+    }
+    &-service {
+        width: 120.0rem;
+        margin: 7.5rem auto 0;
+        display: flex;
+        &-content {
+            width: 33.33333%;
+            display: flex;
+            flex-direction: column;
+            padding: 2.0rem;
+            .subtitle {
+                margin-bottom: 1.5rem;
+            }
+            .title {
+                text-transform: capitalize;
+                span {
+                    &::after {
+                        background-color: $blue-color;
+                        z-index: -1;
+                    }
+                }
+                margin-bottom: 2.0rem;
+            }
+            p {
+                color:#9a9a9a;
+                font-size: 1.4rem;
+                letter-spacing: .1rem;
+                line-height: 2.7rem;
+                margin: 1.0rem 0;
+            }
+            &--price {
+                margin-top: 2.0rem;
+                display: flex;
+                align-items: flex-end;
+                span {
+                    color: #dadada;
+                    font-size: 3.0rem;
+                    letter-spacing: .1rem;
+                    line-height: 3.0rem;
+                    text-decoration: line-through;
+                    margin-right: 1.2rem;
+                }
+                h1{
+                    color: #555555;
+                    font-size: 3.0rem;
+                    letter-spacing: .2rem;
+                    line-height: 3.0rem;
+                    font-weight: 400;
+                    margin-right: .4rem;
+                }
+                h6 {
+                    font-size: 1.4rem;
+                    color: #555555;
+                    letter-spacing: .1rem;
+                    font-weight: 400;
+                }
+            }
+            button {
+                margin-top: 3.0rem;
+                width: fit-content;
+                background-color: $green-color;
+                color: #fff;
+            }
+
+        }
+        &-pic{
+            width: 66.66667%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            img {
+                padding: 2.0rem;
+                width: 100%;
+                height: 41.0rem;
+                object-fit: cover;
+                object-position: center;
+            }
+            &-countdown{
+                background-color: $blue-color;
+                color: #fff;
+                height: 11.5rem;
+                display: flex;
+                align-items: center;
+                width: fit-content;
+                transform: translateY(-75%);
+                .countdown-block{
+                    display: flex;
+                    flex-direction: column;
+                    text-align: center;
+                    margin: 3.0rem 0 0;
+                    padding: 0 3.0rem;
+                    h1 {
+                        font-size: 3.5rem;
+                        letter-spacing: .1rem;
+                        line-height: 3.5rem;
+                        text-align: center;
+                        font-weight: 400;
+                        &:nth-child(2){
+                            font-size: 1.3rem;
+                            letter-spacing: .2rem;
+                            line-height: 1.3rem;
+                            margin: .0rem .0rem 3.0rem;
+                            text-align: center;
+                            font-weight: 300;
+                            text-transform: uppercase;
+                        }
+                    }
+                    
+                }
+                span {
+                    color: #13b3ce;
+                    font-weight: 600;
+                    font-size: 3.6rem;
+                }
+            }
+        }
+    }
+    &-tours {
+        width: 120.0rem;
+        margin: auto;
+        display: flex;
+        &-item {
+            width: 33.333%;
+            display: flex;
+            padding: 0 2.0rem;
+            img {
+                width: 5.0rem;
+                height: 5.0rem;
+            }
+            &-des {
+                display: flex;
+                flex-direction: column;
+                gap: 2.0rem;
+                margin-left: 2.4rem;
+                h1 {
+                    color: #555555;
+                    font-size: 2.4rem;
+                    line-height: 2.4rem;
+                }
+                p {
+                    color:#9a9a9a;
+                    font-size: 1.4rem;
+                    letter-spacing: .1rem;
+                    line-height: 2.7rem;
+                }
+                span{
+                    color: $blue-color;
+                    font-size: 1.4rem;
+                    line-height: 1.4rem;
+                }
+            }
+        }
+    }
+    &-footer {
+        margin-top: 7.5rem;
+        width: 100%;
+        height: 27.0rem;
+        display: flex;
+        &-block {
+            width: 50%;
+            background-image: url('../img/holidays-footer-1.jpg');
+            background-position: 50% 50%;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            h2 {
+                color: #fff;
+            }
+            h1 {
+                color:#fff;
+                margin: 2.0rem 0;
+                text-transform: capitalize;
+            }
+            button {
+                margin-top: 2.0rem;
+            }
+            &:nth-child(2) {
+                background-image: url('../img/holidays-footer-2.jpg');
+            }
+        }
+    }
+}

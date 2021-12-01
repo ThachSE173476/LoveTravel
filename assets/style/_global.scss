@@ -1,0 +1,81 @@
+@import './variables';
+.button-small {
+    border-radius: 3.0rem;
+    display: inline-block;
+    font-size: 1.4rem;
+    letter-spacing: .1rem;
+    line-height:1.4rem;
+    padding: .5rem 2.0rem;
+    border: none;
+    outline: none;  
+    color: #fff;
+    text-transform: uppercase;
+    height: fit-content;
+    cursor: pointer;
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+.button-big {
+    background-color: #ffffff;
+    border-radius: 3.8rem;
+    color: black;
+    font-size: 1.4rem;
+    letter-spacing: .2rem;
+    line-height: 1.4rem;
+    padding: 1.5rem 3.5rem;
+    text-transform: uppercase;
+    border: none;
+    outline: none;  
+    cursor: pointer;
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+.title {
+    color: #555555;
+    font-size: 3.6rem;
+    font-weight: 700;
+    line-height: 3.6rem;
+    text-transform: uppercase;
+    span{
+        font-size: 100%;
+        position: relative; 
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 1.0rem;
+            left: 0;
+            width: 100%;
+            height: 0.6rem;
+            z-index: -1;
+        }
+    }
+}
+
+.subtitle {
+    text-transform: uppercase;
+    color: #9a9a9a;
+    font-size: 1.4rem;
+    letter-spacing: .2rem;
+    line-height: 1.4rem;
+    font-weight: 300;
+}
+
+.logo {
+    width: 3.6rem;
+    height: 3.6rem;
+    letter-spacing: .1rem;
+    line-height: 2.7rem;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom, rgba(101,100,96,0) 0%,rgba(101,100,96,0.1) 60%,rgba(101,100,96,0.65) 100%);
+}

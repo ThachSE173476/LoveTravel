@@ -1,0 +1,196 @@
+@import './variables';
+.modal {
+    width: 36.4rem;
+    height: 100%;
+    overflow-y: scroll;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 100;
+    position: fixed;
+    text-align: center;
+    transition: all 0.5s ease;
+    &.open {
+        transform: translateX(0);
+    }
+    &.close {
+       transform: translateX(100%);
+    }
+    &-wrapper {
+        padding: 1.5rem;
+        margin-top: 2.0rem;
+        .subtitle {
+            font-size: 1.4rem;
+            margin-bottom: .2rem;
+        }
+        .title {
+            font-size: 2.5rem;
+            span {
+                &::after {
+                    background-color: $yellow-color;
+                    z-index: -1;
+                    transform: translateY(.4rem);
+                }
+            }
+        }
+        .title.minutes{
+            span {
+                &::after {
+                    background-color: $orange-color;
+                }
+            }
+        }
+    }
+    &-list {
+        margin-top: 2.5rem;
+        padding: 0 1.5rem;
+        .modal-item {
+            display: flex;
+            gap: 3.0rem;
+            width: 100%;
+            padding: 1.5rem 0 1.5rem 1.5rem;
+            img {
+                width: 10.0rem;
+                height: 10.0rem;
+                object-fit: cover;
+                object-position: center;
+            }
+            &-des {
+                text-align: left;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                h1 {
+                    color: #555555;
+                    font-size: 2.0rem;
+                    line-height: 2.0rem;
+                    font-weight: 500;
+                }
+                h3{
+                    color:#9a9a9a;
+                    font-size:1.5rem;
+                    letter-spacing:.2rem;
+                    line-height:1.5rem;
+                    font-weight: 300;
+                }
+                button {
+                    color: #fff;
+                    width: fit-content;
+                }
+            }
+        }
+    }
+    .destinations {
+        margin: 2.0rem 0;
+    }
+    .destinations-item {
+        margin: auto;
+        width: 26.4rem;
+        height: 26.4rem;
+        &-img {
+            &-bg {
+                width: 26.4rem;
+                height: 26.4rem;
+            }
+        }
+        .button-big {
+            margin-top: 2.0rem;
+            background-color: #fff;
+            color: $blue-color;
+            cursor: pointer;
+            line-height: 1.8rem;
+            font-weight: 300;
+            padding: 0.5rem 1.5rem;
+        }
+    }
+    &-close {
+        position: absolute;
+        top: 2.4rem;
+        right: 2.4rem;
+        position: fixed;
+        cursor: pointer;
+        i {
+            font-size: 3.2rem;
+            color: $lightred-color;
+        }
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+}
+
+.modal-slide{
+    &-open {
+        position: absolute;
+        top: 50%;
+        right: 2.5rem;
+        transform: translateY(-50%);
+        position: fixed;
+        z-index: 101;
+        padding-right: 2.5rem;
+        cursor: pointer;
+        i {
+            font-size: 2.4rem;
+            color: #ccc;
+            z-index: 101;
+            animation: open 1.5s linear;
+            animation-iteration-count: infinite;
+        }
+    }
+    &-close {
+        position: absolute;
+        top: 50%;
+        right: 35.0rem;
+        transform: translateY(-50%);
+        position: fixed;
+        z-index: 101;
+        padding-right: 2.5rem;
+        cursor: pointer;
+        display: none;
+        i {
+            font-size: 2.4rem;
+            color: #ccc;
+            z-index: 101;
+            animation: close 1.5s linear;
+            animation-iteration-count: infinite;
+        }
+    }
+}
+
+@keyframes open {
+    0% {
+        transform: translateX(2.5rem);
+        opacity: 0.25;
+    }
+    50% {
+        transform: translateX(1.5rem);
+        opacity: 0.5;
+    }
+    75% {
+        transform: translateX(.5rem);
+        opacity: 0.75;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes close {
+    0% {
+        transform: translateX(0);
+        opacity: 0.25;
+    }
+    50% {
+        transform: translateX(.5rem);
+        opacity: 0.5;
+    }
+    75% {
+        transform: translateX(1.5rem);
+        opacity: 0.75;
+    }
+    100% {
+        transform: translateX(2.5rem);
+        opacity: 1;
+    }
+}
