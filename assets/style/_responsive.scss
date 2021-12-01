@@ -78,7 +78,15 @@
                         color: #f1f1f1;
                         font-weight: 500;
                     }
+                    .menu {
+                        &-item {
+                            min-width: fit-content;
+                            max-width: 15rem;
+                        }
+                        z-index: 100;
+                    }
                 }
+                
             }
         }
         .header-wrapper {
