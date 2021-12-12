@@ -194,3 +194,18 @@
         opacity: 1;
     }
 }
+.modal::-webkit-scrollbar {
+    width: 0.7vw;
+}
+.modal::-webkit-scrollbar-track-piece {
+    background-color: transparent;
+}
+
+.modal::-webkit-scrollbar-thumb {
+    background-color: #a3a3a3;
+    border-radius: 1rem;
+}
+
+.modal::-webkit-scrollbar-track {
+    background-color: #fff;
+}
